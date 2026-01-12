@@ -1,0 +1,248 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Career Path Recommendation System</title>
+
+    
+    <link rel="stylesheet" href="ProjDesign.css">
+</head>
+<body>
+         
+
+    <div class="container">
+
+        <header>
+            
+            <h2>Welcome</h2>
+            <h1>🎓 Career Path Navigator</h1>
+            <p>Discover Your Perfect Strand, Course & Career Path</p>
+        </header>
+ 
+
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('strands')">Explore Strands</button>
+            <button onclick="showSection('quiz')">Take Quiz</button>
+            <button onclick="showSection('results')">My Results</button>
+            <button onclick="showSection('courses')">College Courses</button>
+        </nav>
+    
+
+
+        <div class="content">
+            <!-- Home Section -->
+            <div id="home" class="section active">
+                <h2>Welcome to Career Path Navigator</h2>
+                <p style="margin-bottom: 20px; color: #666; line-height: 1.6;">
+                    This platform helps Senior High School students discover suitable strands, college courses, and career paths that align with their interests and skills.
+                </p>
+                <button class="btn" onclick="showSection('strands')">Explore Strands →</button>
+            </div>
+            
+            <!-- Strands -->
+            <div id="strands" class="section">
+                <h2>Explore Strands</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>STEM</h3>
+                        <p>Science, Technology, Engineering, and Mathematics</p>
+                        <button class="btn" onclick="location.href='stem-strand/stem.html'" style="margin-top: 10px;">View Strand</button>
+                    </div>
+                    <div class="card">
+                        <h3>ABM</h3>
+                        <p>Accountancy, Business, and Management</p>
+                        <button class="btn" onclick="location.href='abm-strand/abm.html'" style="margin-top: 10px;">View Strand</button>
+                    </div>
+                    <div class="card">
+                        <h3>HUMSS</h3>
+                        <p>Humanities and Social Sciences</p>
+                        <button class="btn" onclick="location.href='humss-strand/humss.html'"  style="margin-top: 10px;">View Strand</button>
+                    </div>
+                    <div class="card">
+                        <h3>TVL</h3>
+                        <p>Technical Vocational Livelihood</p>
+                        <button class="btn" onclick="location.href='tvl tracks/tvl.html'" style="margin-top: 10px;">View Tracks</button>
+                        
+                    </div>
+                </div>
+            </div>
+            
+           <!-- Quiz Section -->
+<div id="quiz" class="section">
+  <h2>Career Recommendation Quiz</h2>
+  <p style="margin-bottom: 20px; color: #666;">
+   These questions are for incoming Grade 11 students, Answering these questions will give you recommendations on what strand to pick.
+  </p>
+  <form id="quizForm">
+
+    <!-- STEM Questions -->
+    <div class="form-group">
+      <p>Do you like solving math problems?</p>
+      <label><input type="radio" name="q1" value="yes" data-strand="STEM"> Yes</label>
+      <label><input type="radio" name="q1" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you enjoy doing science experiments?</p>
+      <label><input type="radio" name="q2" value="yes" data-strand="STEM"> Yes</label>
+      <label><input type="radio" name="q2" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you like working with computers or technology?</p>
+      <label><input type="radio" name="q3" value="yes" data-strand="STEM"> Yes</label>
+      <label><input type="radio" name="q3" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you enjoy analyzing or figuring out how things work?</p>
+      <label><input type="radio" name="q4" value="yes" data-strand="STEM"> Yes</label>
+      <label><input type="radio" name="q4" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you like science or experimenting?</p>
+      <label><input type="radio" name="q5" value="yes" data-strand="STEM"> Yes</label>
+      <label><input type="radio" name="q5" value="no"> No</label>
+    </div>
+
+    <!-- HUMSS Questions -->
+    <div class="form-group">
+      <p>Do you like writing or reading?</p>
+      <label><input type="radio" name="q6" value="yes" data-strand="HUMSS"> Yes</label>
+      <label><input type="radio" name="q6" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Are you interested in people and society?</p>
+      <label><input type="radio" name="q7" value="yes" data-strand="HUMSS"> Yes</label>
+      <label><input type="radio" name="q7" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you enjoy speaking or sharing ideas?</p>
+      <label><input type="radio" name="q8" value="yes" data-strand="HUMSS"> Yes</label>
+      <label><input type="radio" name="q8" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you like helping or listening to others?</p>
+      <label><input type="radio" name="q9" value="yes" data-strand="HUMSS"> Yes</label>
+      <label><input type="radio" name="q9" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Would you like a job that requires talking to many people?</p>
+      <label><input type="radio" name="q10" value="yes" data-strand="HUMSS"> Yes</label>
+      <label><input type="radio" name="q10" value="no"> No</label>
+    </div>
+
+    <!-- ABM Questions -->
+    <div class="form-group">
+      <p>Do you like business topics?</p>
+      <label><input type="radio" name="q11" value="yes" data-strand="ABM"> Yes</label>
+      <label><input type="radio" name="q11" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you enjoy planning or organizing things?</p>
+      <label><input type="radio" name="q12" value="yes" data-strand="ABM"> Yes</label>
+      <label><input type="radio" name="q12" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you like handling money or simple budgeting?</p>
+      <label><input type="radio" name="q13" value="yes" data-strand="ABM"> Yes</label>
+      <label><input type="radio" name="q13" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you want to learn about marketing or sales?</p>
+      <label><input type="radio" name="q14" value="yes" data-strand="ABM"> Yes</label>
+      <label><input type="radio" name="q14" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Are you interested in business, entrepreneurship, or marketing?</p>
+      <label><input type="radio" name="q15" value="yes" data-strand="ABM"> Yes</label>
+      <label><input type="radio" name="q15" value="no"> No</label>
+    </div>
+
+    <!-- TVL Questions -->
+    <div class="form-group">
+      <p>Do you enjoy tasks that require logical and analytical thinking?</p>
+      <label><input type="radio" name="q16" value="yes" data-strand="TVL"> Yes</label>
+      <label><input type="radio" name="q16" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you like fixing, building, or creating things?</p>
+      <label><input type="radio" name="q17" value="yes" data-strand="TVL"> Yes</label>
+      <label><input type="radio" name="q17" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you prefer practical tasks over long reading?</p>
+      <label><input type="radio" name="q18" value="yes" data-strand="TVL"> Yes</label>
+      <label><input type="radio" name="q18" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Are you interested in learning specific job skills?</p>
+      <label><input type="radio" name="q19" value="yes" data-strand="TVL"> Yes</label>
+      <label><input type="radio" name="q19" value="no"> No</label>
+    </div>
+    <div class="form-group">
+      <p>Do you like using technology or machines?</p>
+      <label><input type="radio" name="q20" value="yes" data-strand="TVL"> Yes</label>
+      <label><input type="radio" name="q20" value="no"> No</label>
+    </div>
+
+    <button type="submit" class="btn">Get Recommendations</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+            
+            <!-- Results Section -->
+            <div id="results" class="section">
+                <h2>Your Personalized Results</h2>
+                <p style="margin-bottom: 20px; color: #666;">.</p>
+            </div>
+        </div>
+
+        <!-- College Courses -->
+            <div id="courses" class="section">
+                <h2>Explore College Courses Ralated To:</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>STEM</h3>
+                        <p>Science, Technology, Engineering, and Mathematics</p>
+                        <button class="btn" onclick="location.href='stem-courses/stem.html'" style="margin-top: 10px;">View Courses</button>
+                    </div>
+                    <div class="card">
+                        <h3>ABM</h3>
+                        <p>Accountancy, Business, and Management</p>
+                        <button class="btn" onclick="location.href='abm-courses/abm.html'" style="margin-top: 10px;">View Courses</button>
+                    </div>
+                    <div class="card">
+                        <h3>HUMSS</h3>
+                        <p>Humanities and Social Sciences</p>
+                        <button class="btn" onclick="location.href='humss-courses/humss.html'" style="margin-top: 10px;">View Courses</button>
+                    </div>
+                    <div class="card">
+                        <h3>TVL</h3>
+                        <p>Technical Vocational Livelihood</p>
+                        <button class="btn" onclick="location.href='tvl-courses/tvl.html'" style="margin-top: 10px;">View Courses</button>
+                        
+                    </div>
+                </div>
+            </div> 
+            
+        
+        <footer>
+            <p>&copy; 2025 Student Career Path Recommendation System. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+<script src="quiz.js"></script>
+</body>
+</html>
